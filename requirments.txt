@@ -1,0 +1,4 @@
+flask_mail
+flask
+numpy
+pandas

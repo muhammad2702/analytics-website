@@ -5,6 +5,7 @@ from flask import Flask, render_template, request, redirect, url_for
 from flask_mail import Mail, Message
 app = Flask(__name__)
 
+port = int(os.environ.get("PORT", 5000))
 
 # Configure Flask-Mail for Gmail
 app.config['MAIL_SERVER'] = 'smtp.office365.com'
@@ -48,4 +49,4 @@ def contact():
 
     return render_template('contact.html')
 if __name__ == '__main__':
-    app.run(port=5000)
+    app.run(host="0.0.0.0", port=port)

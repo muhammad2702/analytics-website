@@ -1,0 +1,198 @@
+/* style.css */
+
+/* Video Container Styles */
+.video-container {
+  position: relative;
+  top: 70px; /* Add space for the header */
+}
+
+/* Darken the Video */
+#background-video {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -1;
+  filter: brightness(100%); /* Adjust the brightness value as needed */
+}
+/* style.css */
+/* style.css */
+
+/* Add the white color style for the typewriter section */
+
+/* Add styles for the typewriter animation */
+.typewriter-container {
+  position: absolute;
+  bottom: 500px; /* Adjust the bottom value to control the distance from the bottom */
+  left: 10px; /* Adjust the left value to position the section on the bottom left corner */
+  z-index: 100; /* Ensure the text is above the video */
+  font-size: 24px; /* Adjust font size as needed */
+}
+
+.typewriter-section {
+  color: #ffffff; /* White color */
+  max-width: 2000px; /* Set a maximum width for the text box */
+  max-height: 100px
+  margin: 0 auto; /* Center the text box horizontally */
+  padding: 20px; /* Add some padding around the text */
+  border-radius: 10px; /* Add rounded corners to the text box */
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  margin: 20px;
+  z-index: 100; /* Ensure the text is above the video */
+  font-size: 32px; /* Adjust font size as needed */
+}
+
+.typewriter {
+  overflow-wrap: break-word; /* Ensure that words wrap within the box */
+  word-wrap: break-word; /* Ensure that words wrap within the box for older browsers */
+  overflow: hidden; /* Hide any overflowing text */
+  letter-spacing: 0.15em;
+}
+
+/* Text Over the Video */
+@font-face {
+  font-family: 'BodoniFLF';
+  src: url('static/fonts/BodoniFLF-Roman.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.video-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #ffffff;
+  font-family: 'BodoniFLF', serif;
+}
+
+/* Header Styles */
+header {
+  background-color: #333;
+  padding: 10px 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-around; /* Align buttons horizontally */
+  align-items: center;
+  z-index: 1000; /* Ensure header is on top of the video */
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+nav li {
+  margin-right: 20px;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px; /* Increase font size for bigger buttons */
+}
+
+/* Add other styles and utility classes as needed */
+/* tailwind.css */
+
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+/* Custom 3D Effects */
+
+/* 3D Box Effect */
+@layer utilities {
+  .box-3d {
+    perspective: 800px;
+  }
+
+  .box-3d .box {
+    transform-style: preserve-3d;
+    transition: transform 0.3s;
+  }
+
+  .box-3d:hover .box {
+    transform: rotateX(20deg) rotateY(10deg) translateZ(20px);
+  }
+}
+
+/* 3D Button Effect */
+@layer utilities {
+  .btn-3d {
+  perspective: 800px;
+}
+
+.btn-3d .btn {
+  perspective: 1000px;
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #3490dc;
+  color: #ffffff;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.btn-3d .btn:hover {
+  transform: translateY(-3px) translateZ(3px);
+}
+
+
+
+/* Custom Bell and Whistles (additional utility classes) */
+
+@layer utilities {
+  /* Shadows */
+  .shadow-lg-custom {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  }
+
+  /* Gradients */
+  .gradient-purple {
+    background-image: linear-gradient(45deg, #0000FF, #36E62D);
+  }
+
+  .gradient-blue {
+    background-image: linear-gradient(45deg, #00B4DB, #0083B0);
+  }
+
+  /* Hover Effects */
+  .hover-scale {
+    transition: transform 0.2s ease-out;
+  }
+
+  .hover-scale:hover {
+    transform: scale(1.01);
+  }
+
+  .hover-rotate {
+    transition: transform 0.1s ease-in-out;
+  }
+
+  .hover-rotate:hover {
+    transform: rotate(360deg);
+  }
+}
+
+/* Add more custom styles and utility classes as needed */
+
+/* Tailwind Base, Components, and Utilities */
+@import 'tailwindcss/typography';
+
+/* Override Default Fonts */
+@layer base {
+  body {
+    font-family: 'Helvetica', sans-serif;
+  }
+}

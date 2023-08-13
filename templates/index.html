@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Design Labs Analytics</title>
+  <style>
+    /* Add this CSS to adjust the button and fiverr gig */
+     .contact-button {
+      font-size: 24px; /* Double the font size for Contact Now button */
+      border-radius: 10px; /* Add rounded corners */
+      padding: 20px; /* Increase padding for larger button */
+      bottom: 20px;
+      left: 20px;
+      z-index: 2; /* Place above other elements */
+    }
+
+    .fiverr-gig {
+      padding: 10px;
+      margin-top: 20px;
+      background-color: #f0f0f0;
+      position: fixed;
+      bottom: 800px;
+      left: 1700px;
+      z-index: 1; /* Behind the contact button */
+    }
+    /* Your existing styles */
+    h2 {
+      font-size: 64px;
+      font-weight: bold;
+      margin-top: 100px;
+      color: #ffffff;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 32px;
+      color: #ffffff;
+      margin-top: 100px;
+      margin-bottom: 20px;
+    }h2 {
+  font-size: 64px; /* Adjust the font size as needed */
+  font-weight: bold;
+    margin-top: 100px; /* Add some margin at the top to bring the text down */
+
+  color: #ffffff; /* Set the color of the heading text */
+  margin-bottom: 10px; /* Add some margin at the bottom */
+}
+
+p {
+  font-size: 32px; /* Adjust the font size as needed */
+  color: #ffffff; /* Set the color of the paragraph text */
+  margin-top: 100px; /* Add some margin at the top to bring the text down */
+
+  margin-bottom: 20px; /* Add some margin at the bottom */
+}</style>
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+  <!-- Header with buttons -->
+  <header>
+    <nav>
+      <ul>
+           <li><a href="portfolio">Portfolio</a></li>
+          <li><a href="/">Design Labs Analytics</a></li>
+
+        <li><a href="contact">Contact</a></li>
+
+      </ul>
+    </nav>
+  </header>
+
+<!-- Video Background -->
+<video autoplay muted loop id="background-video">
+  <source src="{{ url_for('static', filename='video/your_video.mp4') }}" type="video/mp4">
+</video>
+
+
+
+<!-- Typewriting Animation Section -->
+<div class="typewriter-section">
+  <div class="typewriter">
+    <h3 id="typewriter-text"></h3>
+  </div>
+</div>
+<h2>Welcome to Design Labs Data Analytics</h2>
+
+
+
+    <div class="fiverr-gig">
+
+<div itemscope itemtype='http://schema.org/Person' class='fiverr-seller-widget' style='display: inline-block;'>
+     <a itemprop='url' href=https://www.fiverr.com/designlabswork rel="nofollow" target="_blank" style='display: inline-block;'>
+        <div class='fiverr-seller-content' id='fiverr-seller-widget-content-2309d6bc-289b-4d6e-9d6d-910dde7e6438' itemprop='contentURL' style='display: none;'></div>
+        <div id='fiverr-widget-seller-data' style='display: none;'>
+            <div itemprop='name' >designlabswork</div>
+            <div itemscope itemtype='http://schema.org/Organization'><span itemprop='name'>Fiverr</span></div>
+            <div itemprop='jobtitle'>Seller</div>
+            <div itemprop='description'>Hey there!
+This is design labs. We are passion-driven people and our goal is to provide the best services to people and businesses.
+
+We fully understand that it is the customer that matters because we may not be your need but we need you to collaborate with us
+
+We work tirelessly to bring the best results!
+</div>
+        </div>
+    </a>
+</div>
+
+<script id='fiverr-seller-widget-script-2309d6bc-289b-4d6e-9d6d-910dde7e6438' src='https://widgets.fiverr.com/api/v1/seller/designlabswork?widget_id=2309d6bc-289b-4d6e-9d6d-910dde7e6438' data-config='{"category_name":"\n                                    Data\n\n                            "}' async='true' defer='true'></script>
+
+    </div>>
+  <div class="btn-3d">
+    <button class="btn">
+      <a href="{{ url_for('contact') }}" class="contact-button">Contact Now</a>
+    </button>
+  </div>
+
+<!-- Your Previous Projects Section -->
+<section id="projects">
+  <!-- Add your content here -->
+</section>
+
+<!-- About Us Section -->
+<section id="about">
+  <!-- Add your content here -->
+</section>
+
+<script>
+  const text1 = "In today's world, data is everywhere. But it's not always easy to find the insights you need to make better decisions. That's where we come in.";
+  const text2 = "We use a mathematical approach to process data and find insights. Our data analytics services can help you make better decisions and gain a competitive advantage ";
+  const text3 = "We are certified data analysts with a proven track record of success. With our cutting-edge tech stack of R, Python, Tableau and Excel, we unlock the full potential of your data, making it come to life. ";
+
+  const typewriterTextElement = document.getElementById("typewriter-text");
+  let charIndex = 0;
+
+  function typeWriter() {
+    if (charIndex < text1.length) {
+      typewriterTextElement.innerHTML += text1.charAt(charIndex);
+      charIndex++;
+      setTimeout(typeWriter, 50); // Adjust the typing speed here (lower value means faster typing)
+    } else {
+      setTimeout(() => {
+        typewriterTextElement.innerHTML = "";
+        charIndex = 0;
+        typeWriterPart2();
+      }, 500); // Move to Part 2 after 5 seconds
+    }
+  }
+
+  function typeWriterPart2() {
+    if (charIndex < text2.length) {
+      typewriterTextElement.innerHTML += text2.charAt(charIndex);
+      charIndex++;
+      setTimeout(typeWriterPart2, 50); // Adjust the typing speed here (lower value means faster typing)
+    } else {
+      setTimeout(() => {
+        typewriterTextElement.innerHTML = "";
+        charIndex = 0;
+        typeWriterPart3();
+      }, 500); // Move to Part 3 after 15 seconds
+    }
+  }
+
+  function typeWriterPart3() {
+    if (charIndex < text3.length) {
+      typewriterTextElement.innerHTML += text3.charAt(charIndex);
+      charIndex++;
+      setTimeout(typeWriterPart3, 50); // Adjust the typing speed here (lower value means faster typing)
+    }
+  }
+
+  document.addEventListener("DOMContentLoaded", typeWriter);
+</script>
+
+</body>
+</html>

@@ -3,6 +3,7 @@ import numpy as np
 from flask import render_template, Flask, request
 from flask import Flask, render_template, request, redirect, url_for
 from flask_mail import Mail, Message
+import os
 app = Flask(__name__)
 
 port = int(os.environ.get("PORT", 5000))

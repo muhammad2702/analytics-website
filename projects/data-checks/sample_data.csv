@@ -1,0 +1,10 @@
+customer_id,age,income,account_status,score
+1,24,55000,active,720
+2,31,82000,active,690
+3,,48000,inactive,610
+4,45,-1000,active,650
+5,31,82000,active,690
+5,31,82000,active,690
+6,52,125000,pending,780
+7,19,30000,unknown,580
+8,67,90000,active,810
